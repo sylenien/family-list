@@ -1,7 +1,8 @@
 const initialState = {
   entryes: [{
     price: "1024",
-    date: "01/08",
+    date: "01",
+    month: "01",
     year: "2019",
     name: "HDHD",
     icon: "🥂",
@@ -9,7 +10,8 @@ const initialState = {
   },
   {
     price: "322",
-    date: "02/08",
+    date: "02",
+    month: "01",
     year: "2019",
     name: "HDzxcghvzxD",
     icon: "🍽",

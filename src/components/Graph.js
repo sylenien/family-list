@@ -9,7 +9,7 @@ const GraphEl = styled.div`
 const Graph = ({ list }) => (
   <GraphEl> 
     <ResponsiveContainer height='100%' aspect={2.0/0.5}>
-      <LineChart data={list.entryes}>
+      <LineChart data={list.entryes}  margin={{right: 20, top: 15, left: 20}}>
         <Line 
           type="monotone" 
           dataKey="price" 
