@@ -1,5 +1,19 @@
 const initialState = {
-  entryes: []
+  entryes: [{
+    price: "3322",
+    date: new Date().toDateString(),
+    name: "HDHD",
+    icon: "shopping.png",
+    id: 1,
+  },
+  {
+    price: "322",
+    date: new Date().toDateString(),
+    name: "HDzxcghvzxD",
+    icon: "shopping.png",
+    id: 1,
+  }
+]
 }
 
 export default function list(state = initialState, action) {
