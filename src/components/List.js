@@ -7,6 +7,7 @@ import ListEmpty from './ListEmpty';
 
 const ListEl = styled.div`
   height: 100%;
+  padding: 1.5em;
 `;
 
 
