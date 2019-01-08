@@ -1,14 +1,16 @@
 const initialState = {
   entryes: [{
     price: "1024",
-    date: new Date().toDateString(),
+    date: "01/08",
+    year: "2019",
     name: "HDHD",
     icon: "🥂",
     id: 1,
   },
   {
     price: "322",
-    date: new Date().toDateString(),
+    date: "02/08",
+    year: "2019",
     name: "HDzxcghvzxD",
     icon: "🍽",
     id: 2,

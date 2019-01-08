@@ -21,7 +21,6 @@ const Input = styled.input`
   border-bottom: 2px solid #1976D2;
   font-size: 16px;
   line-height: 16px;
-  ${'' /* height: 70px; */}
   text-align: center;
   background: transparent;
   color: #BBDEFB;
@@ -85,16 +84,17 @@ const emojis = ['🍽', '🍕', '🍎', '💅', '🎮', '📱', '💳', '🏠', 
 class Add extends Component {
   constructor(props) {
     super(props);
+    const lastId = this.props.list.entryes.sort((x, y) => y.id - x.id)[0].id
     this.state = {
       price: "",
       date: "",
       name: "",
       icon: "",
-      id: "",
+      id: lastId + 1,
     }
     this.pickEmoji = this.pickEmoji.bind(this);
     this.changeData = this.changeData.bind(this);
-    // this.props.addEntry // => f;
+    this.saveEntry = this.saveEntry.bind(this);
   }
   pickEmoji(emoji) {
     this.setState({icon: emoji})
@@ -105,6 +105,11 @@ class Add extends Component {
     state[key] = target.value;
     this.setState(state);
   }
+  saveEntry() {
+    const entry = this.state;
+    this.props.addEntry(entry);
+    this.props.history.push('/')
+  }
   render() {
     const { icon } = this.state;
     return (
@@ -114,7 +119,7 @@ class Add extends Component {
           <FormIcon>{icon ? smoji(icon) : smoji('🔥')}</FormIcon>
           <Input type="text" onChange={(e) => this.changeData(e, 'price')} placeholder="Price" />
           <Input type="text" onChange={(e) => this.changeData(e, 'name')} placeholder="Where" />
-          <FormIcon>{smoji('💾')}</FormIcon>
+          <FormIcon onClick={this.saveEntry}>{smoji('💾')}</FormIcon>
         </InputItem>
       </AddForm>
       <Icons>
