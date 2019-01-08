@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import emoji from 'react-easy-emoji';
+//import emoji from 'react-easy-emoji';
+import smoji from '../emoji.js';
 
 const AddForm = styled.div`
   background-color: #796EFF;
@@ -72,14 +73,7 @@ const Return = styled.div`
   color: white;
 `;
 
-function smoji (input) {
-	return emoji(input, {
-		baseUrl: '//twemoji.maxcdn.com/2/svg',
-    ext: '.svg',
-    protocol: 'https:',
-    size: "",
-	})
-}
+
 const emojis = ['🍽', '🍕', '🍎', '💅', '🎮', '📱', '💳', '🏠', '🐱', '🏄‍♂️', '🧴', '🚕', '🚇', '👕', '💊', '🖥', '🎁', '🛒']
 class Add extends Component {
   constructor(props) {
