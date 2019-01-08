@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 
 import ListComponent from '../components/List';
 
-const mapStateToProps = ({ list }) => ({ list });
-
+const mapStateToProps = ({ list, month }) => { //({ list, month });
+  const currentList = list.entryes.filter(item => parseInt(item.month) === month);
+  return { list: { entryes: currentList }, month: month }
+}
 export default connect(mapStateToProps)(ListComponent);

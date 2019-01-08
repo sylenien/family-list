@@ -1,4 +1,3 @@
-//import React from 'react';
 import emoji from 'react-easy-emoji';
 
 const smoji = (input) => {

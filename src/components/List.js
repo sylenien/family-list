@@ -11,8 +11,9 @@ const ListEl = styled.div`
 `;
 
 
-const List = ({list}) => (
+const List = ({ list, month }) => (
   <div>
+    {console.log(list, month)}
     {list.entryes.length === 0 ? 
       (<ListEmpty />) 
       :
