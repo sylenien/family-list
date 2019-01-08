@@ -18,7 +18,7 @@ const List = ({list}) => (
       (
       <ListEl>
         {list.entryes.map(item => (
-            <ListEntry {...item} />
+            <ListEntry key={item.id} {...item} />
           )
         )}
       </ListEl>
