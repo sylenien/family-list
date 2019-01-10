@@ -31,15 +31,10 @@ const Graph = ({ list }) => {
     <GraphEl> 
       <ResponsiveContainer height='100%' aspect={2.0/0.5}>
         <LineChart data={data}  margin={{right: 20, top: 15, left: 20}}>
-          <Line 
-            type="monotone" 
-            dataKey="price" 
-            stroke="#ffff"
-          >
+          <Line type="monotone" dataKey="price" stroke="#ffff">
             <LabelList dataKey="price" position="top" fill="#fff"/>
           </Line>
           <XAxis dataKey="date" stroke="#fff"/>
-          {/* <Tooltip /> */}
         </LineChart>
       </ResponsiveContainer>
     </GraphEl>

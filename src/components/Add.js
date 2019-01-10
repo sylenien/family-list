@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-//import emoji from 'react-easy-emoji';
 import smoji from '../emoji.js';
 
 const AddForm = styled.div`
@@ -78,6 +77,7 @@ const emojis = ['🍽', '🍕', '🍎', '💅',
   '🎮', '📱', '💳', '🏠', '🐱', '🏄‍♂️', 
   '🧴', '🚕', '🚇', '👕', '💊', '🖥', 
   '🎁', '🛒']
+
 class Add extends Component {
   constructor(props) {
     super(props);
@@ -110,25 +110,26 @@ class Add extends Component {
     const { icon } = this.state;
     return (
       <div>
-      <AddForm> 
-        <InputItem>
-          <FormIcon>{icon ? smoji(icon) : smoji('🔥')}</FormIcon>
-          <Input type="text" onChange={(e) => this.changeData(e, 'price')} placeholder="Price" />
-          <Input type="text" onChange={(e) => this.changeData(e, 'name')} placeholder="Where" />
-          <FormIcon onClick={this.saveEntry}>{smoji('💾')}</FormIcon>
-        </InputItem>
-      </AddForm>
-      <Icons>
-        {emojis.map((item, i) => (
-          <div key={i} onClick={() => this.pickEmoji(item)}>{smoji(item)}</div>
-        ))}
-        <br /> <Input type="text" onChange={(e) => this.changeData(e, 'icon')} placeholder="Not enough?" />
-      </Icons>
-      <Link to="/">
-      <Return> 
-        {smoji('👈')} Go Back
-      </Return>
-      </Link>
+        <AddForm> 
+          <InputItem>
+            <FormIcon>{icon ? smoji(icon) : smoji('🔥')}</FormIcon>
+            <Input type="text" onChange={(e) => this.changeData(e, 'price')} placeholder="Price" />
+            <Input type="text" onChange={(e) => this.changeData(e, 'name')} placeholder="Where" />
+            <FormIcon onClick={this.saveEntry}>{smoji('💾')}</FormIcon>
+          </InputItem>
+        </AddForm>
+        <Icons>
+          {emojis.map((item, i) => (
+            <div key={i} onClick={() => this.pickEmoji(item)}>{smoji(item)}</div>
+          ))}
+          <br /> 
+          <Input type="text" onChange={(e) => this.changeData(e, 'icon')} placeholder="Not enough?" />
+        </Icons>
+        <Link to="/">
+          <Return> 
+            {smoji('👈')} Go Back
+          </Return>
+        </Link>
       </div>
     )
   }

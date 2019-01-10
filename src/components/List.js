@@ -10,7 +10,6 @@ const ListEl = styled.div`
   padding: 1.5em;
 `;
 
-
 const List = ({ list, month }) => (
   <div>
     {list.entryes.length === 0 ? 
