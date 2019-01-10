@@ -86,7 +86,7 @@ class Add extends Component {
       price: "",
       date: "",
       name: "",
-      icon: "",
+      icon: "🔥",
       id: lastId + 1,
     }
     this.pickEmoji = this.pickEmoji.bind(this);
@@ -112,7 +112,7 @@ class Add extends Component {
       <div>
         <AddForm> 
           <InputItem>
-            <FormIcon>{icon ? smoji(icon) : smoji('🔥')}</FormIcon>
+            <FormIcon>{smoji(icon)}</FormIcon>
             <Input type="text" onChange={(e) => this.changeData(e, 'price')} placeholder="Price" />
             <Input type="text" onChange={(e) => this.changeData(e, 'name')} placeholder="Where" />
             <FormIcon onClick={this.saveEntry}>{smoji('💾')}</FormIcon>
