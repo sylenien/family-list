@@ -74,7 +74,10 @@ const Return = styled.div`
 `;
 
 
-const emojis = ['🍽', '🍕', '🍎', '💅', '🎮', '📱', '💳', '🏠', '🐱', '🏄‍♂️', '🧴', '🚕', '🚇', '👕', '💊', '🖥', '🎁', '🛒']
+const emojis = ['🍽', '🍕', '🍎', '💅', 
+  '🎮', '📱', '💳', '🏠', '🐱', '🏄‍♂️', 
+  '🧴', '🚕', '🚇', '👕', '💊', '🖥', 
+  '🎁', '🛒']
 class Add extends Component {
   constructor(props) {
     super(props);
@@ -94,7 +97,6 @@ class Add extends Component {
     this.setState({icon: emoji})
   }
   changeData({ target }, key) {
-    console.log('hello')
     const state = this.state;
     state[key] = target.value;
     this.setState(state);

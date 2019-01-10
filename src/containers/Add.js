@@ -7,14 +7,14 @@ import AddComponent from '../components/Add';
 const mapDispatchToProps = dispatch => ({
   addEntry: obj => {
     const today = new Date();
-    const dd = today.getDate();
-    const mm = today.getMonth() + 1;
+    const date = today.getDate();
+    const month = today.getMonth() + 1;
     const year = today.getFullYear();
-    const date = `${mm}/${dd}`
     const entry = { 
       ...obj, 
       date,
-      year
+      year,
+      month
     };
     dispatch(addEntry(entry))
   }
